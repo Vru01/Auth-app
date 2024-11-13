@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Course Outline</title>
+</head>
+<body>
+    <header>
+        <h1>Course Outline</h1>
+    </header>
+
+    <nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="1.html">Return to Homepage</a>
+            <a href="about.html">About the Course</a>
+            <a href="instructors.html">Instructors</a>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Course Modules</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Module</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I</td>
+                        <td>Fundamentals of Compiler</td>
+                        <td>Overview - Structure of a compiler, applications of compiler, one pass and two pass compiler.<br>Lexical analysis - The role of a lexical analyzer, specification of tokens, recognition of tokens, LEX.</td>
+                        <td>
+                            <button class="details-btn">Show Details</button>
+                            <div class="details-content">
+                                <p><strong>Detailed Information:</strong></p>
+                                <p>In this module, you'll explore the structure of compilers in-depth, understand various types of compilers, and study lexical analysis techniques in detail.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>II</td>
+                        <td>Syntax Analysis</td>
+                        <td>Context-free grammar, writing grammars for context-free environments, parse trees and ambiguity, role of parser.<br>Specification and recognition of tokens, top-down parsing, recursive descent and predictive parsers (LL), bottom-up parsing, operator precedence parsing, LR, SLR, and LALR parsers.</td>
+                        <td>
+                            <button class="details-btn">Show Details</button>
+                            <div class="details-content">
+                                <p><strong>Detailed Information:</strong></p>
+                                <p>This module covers context-free grammars, parse trees, and various parsing techniques, including top-down and bottom-up parsing.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>III</td>
+                        <td>Syntax Directed Translation & Run Time Environments</td>
+                        <td>Syntax-directed definitions, evaluation orders for attributes of an SDD, S-attributed and L-attributed SDDs.<br>Construction of syntax tree, source language issues, storage organization and allocation strategies, parameter passing.<br>Symbol table organizations and generations, dynamic storage allocations.</td>
+                        <td>
+                            <button class="details-btn">Show Details</button>
+                            <div class="details-content">
+                                <p><strong>Detailed Information:</strong></p>
+                                <p>This module delves into syntax-directed translations, runtime environments, and symbol table management.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IV</td>
+                        <td>Intermediate Code Generation</td>
+                        <td>Intermediate languages, declarations, different intermediate representations – quadruples, triples, trees, flow graphs, SSA forms, and their uses.<br>Assignment statements and Boolean expressions, case statements, back patching, procedure calls.</td>
+                        <td>
+                            <button class="details-btn">Show Details</button>
+                            <div class="details-content">
+                                <p><strong>Detailed Information:</strong></p>
+                                <p>This module focuses on intermediate code generation techniques and representations.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>Code Optimization</td>
+                        <td>Sources of optimization, basic blocks and flow graphs, optimization of basic blocks, loops in flow graphs.<br>Loop optimization, machine-independent optimization, machine-dependent optimization, dead-code elimination, code improving transformations.</td>
+                        <td>
+                            <button class="details-btn">Show Details</button>
+                            <div class="details-content">
+                                <p><strong>Detailed Information:</strong></p>
+                                <p>This module covers various code optimization techniques to enhance performance.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>VI</td>
+                        <td>Code Generation</td>
+                        <td>Issues in the design of a code generator, run time storage management.<br>Simple code generator - register and address descriptors, code generation algorithm, design of the function getReg, DAG, peephole optimization.<br>Register allocation and assignment, selection of instruction, register allocation, parallel compilation, Just-in-Time compiler, study of compiler construction tools.</td>
+                        <td>
+                            <button class="details-btn">Show Details</button>
+                            <div class="details-content">
+                                <p><strong>Detailed Information:</strong></p>
+                                <p>This module addresses code generation strategies and runtime management.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

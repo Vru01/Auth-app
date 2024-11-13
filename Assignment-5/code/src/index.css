@@ -1,0 +1,36 @@
+.loader {
+  text-align: center;
+  margin: 20px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.character-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.character-card {
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+  transform: scale(1.1);
+  background-color: #f4f4f4;
+}
+
+.modal-content {
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}

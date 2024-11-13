@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Online Bookstore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            position: relative;
+        }
+        nav {
+            margin: 1em 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 1em;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hamburger {
+            display: none;
+            font-size: 2em;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            cursor: pointer;
+        }
+        .featured, .books {
+            display: flex;
+            justify-content: space-around;
+            margin: 1em 0;
+            flex-wrap: wrap;
+        }
+        .book {
+            border: 1px solid #ccc;
+            padding: 1em;
+            text-align: center;
+            margin: 1em;
+            flex: 1 1 calc(25% - 2em);
+            box-sizing: border-box;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .book:hover {
+            transform: scale(1.05);
+        }
+        .book img {
+            max-width: 100px;
+            height: auto;
+        }
+        .cart {
+            position: fixed;
+            top: 1em;
+            right: 1em;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.5em;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 768px) {
+            .book {
+                flex: 1 1 calc(50% - 2em);
+            }
+        }
+        @media (max-width: 600px) {
+            nav {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .featured, .books {
+                flex-direction: column;
+                align-items: center;
+            }
+            .book {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fictional Bookstore</h1>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Books</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="cart">Cart: <span id="cartCount">0</span> items</div>
+    <section class="featured">
+        <div class="book">
+            <img src="Book1.jpg" alt="Book 1">
+            <h3>Sapiens: A Brief History of Humankind</h3>
+            <p>Yuval Noah Harari</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="Book2.jpg" alt="Book 2">
+            <h3>To Kill a Mockingbird</h3>
+            <p>Harper Lee</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </section>
+    <section class="books">
+        <div class="book">
+            <img src="Book3.jpg" alt="Book 3">
+            <h3>1984</h3>
+            <p>George Orwell</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="Book4.jpg" alt="Book 4">
+            <h3>The Alchemist</h3>
+            <p>Paulo Coelho</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </section>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById('cartCount').innerText = cartCount;
+        }
+
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Styles for the balloons */
+        .balloon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: gray;
+            display: inline-block;
+            margin: 5px;
+            transition: opacity 0.3s;
+        }
+        /* #list {
+            max-height: 100px;
+            overflow-y: auto;  
+            border: 1px solid #ccc; 
+            padding: 5px;
+            margin: 10px 0; 
+        } */
+    </style>
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <input type="checkbox" id="myCheckbox">
+    <button id="checkButton">Check Checkbox</button>
+
+    <br><br>
+
+    <input type="text" id="firstName" placeholder="First Name">
+    <input type="text" id="lastName" placeholder="Last Name">
+    <input type="text" id="fullName" placeholder="Full Name" readonly>
+    <button id="combineNames">Combine Names</button>
+
+    <br><br>
+
+    <button id="counterButton">0</button>
+    <button id="incrementButton">Increment</button>
+    <button id="resetButton">Reset</button>
+
+    <br><br>
+
+    <input type="text" id="searchInput" placeholder="Search...">
+    <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Date</li>
+        <li>Fig</li>
+        <li>Grape</li>
+        
+    </ul>
+
+    <br><br>
+
+    <div id="balloonsContainer">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+    <button id="refreshBalloons">Refresh Balloons</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
