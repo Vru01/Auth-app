@@ -1,0 +1,8 @@
+in backend we require :
+express mongoos 
+jwt - jsonwebtoken
+bcrypt - for encryption and decrytion of password 
+body-parser - for allowiing req body to server 
+dotenv 
+joi : server side validations 
+cors : allowing ither port request to our server 
